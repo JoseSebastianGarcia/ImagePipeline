@@ -18,12 +18,14 @@ namespace ConsoleApp6.Commands
             Pipeline pipeline = new Pipeline();
             pipeline.AddProcessor(new GrayscaleProcessor());
             pipeline.AddProcessor(new InvertProcessor());
+            pipeline.AddProcessor(new GaussianBlurProcessor());
             pipeline.AddProcessor(new ExportProcessor());
 
             ImageContext context = new ImageContext() {
                 Grayscale = options.Grayscale,
                 Invert = options.Invert,
                 Destiny = options.Destiny,
+                GaussianBlur = options.GaussianBlur,
                 Image = Image.Load(options.Source)
             };
 

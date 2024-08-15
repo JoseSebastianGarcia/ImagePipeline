@@ -12,6 +12,7 @@ namespace ConsoleApp6.ImagePipeline
         public Image Image { get; set; } = null!;
         public bool Grayscale { set; get; }
         public bool Invert { set; get; }
+        public bool GaussianBlur { set; get; }
         public string Destiny { set; get; } = null!;
     }
 }
